@@ -22,6 +22,6 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.0.0'
-    //compile 'com.mateuyabar:my-android-base:0.0.3'
-    compile project(':cleanbase')
+    compile 'com.mateuyabar:my-android-base:0.0.4'
+    //compile project(':cleanbase')
 }

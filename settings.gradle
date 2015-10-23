@@ -1,3 +1,3 @@
 include ':sampleapp', ':pillownfc'
-include ':cleanbase'
-project(':cleanbase').projectDir = new File('/home/mateuyabar/data/projectes/ideas/CleanBaseLib/cleanbase')
+//include ':cleanbase'
+//project(':cleanbase').projectDir = new File('/home/mateuyabar/data/projectes/ideas/CleanBaseLib/cleanbase')

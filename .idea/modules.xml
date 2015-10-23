@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PillowNFC.iml" filepath="$PROJECT_DIR$/PillowNFC.iml" />
-      <module fileurl="file://$USER_HOME$/data/projectes/ideas/CleanBaseLib/cleanbase/cleanbase.iml" filepath="$USER_HOME$/data/projectes/ideas/CleanBaseLib/cleanbase/cleanbase.iml" />
       <module fileurl="file://$PROJECT_DIR$/pillownfc/pillownfc.iml" filepath="$PROJECT_DIR$/pillownfc/pillownfc.iml" />
       <module fileurl="file://$PROJECT_DIR$/sampleapp/sampleapp.iml" filepath="$PROJECT_DIR$/sampleapp/sampleapp.iml" />
     </modules>
