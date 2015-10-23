@@ -1,0 +1,15 @@
+<resources>
+    <string name="wait_write_dialog_title">Write on NFC Tag</string>
+    <string name="wait_write_dialog_text">Aproach an NFC tag</string>
+    <string name="tag_written_toast">Tag written</string>
+    <string name="cancel">Cancel</string>
+
+    <!--  DeviceListActivity -->
+    <string name="scanning">scanning for devices...</string>
+    <string name="select_device">select a device to connect</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Scan for devices</string>
+</resources>

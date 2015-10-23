@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Pilow NFC</string>
+    <string name="title_activity_sample">Sample activity</string>
+    <string name="title_activity_pillow_nfc_fragment_sample">PillowNfcFragmentSampleActivity
+    </string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+</resources>
