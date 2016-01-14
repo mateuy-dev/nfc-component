@@ -59,7 +59,7 @@ public class BluetoothNfcComponent extends BaseComponent implements TagReadListe
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
         // If the adapter is null, then Bluetooth is not supported
-        if (mBluetoothAdapter == null) {
+        if (mBluetoothAdapter == null && blueToothNotAvailableListener!=null) {
             blueToothNotAvailableListener.blueToothNotAvailable();
         }
     }
@@ -68,6 +68,8 @@ public class BluetoothNfcComponent extends BaseComponent implements TagReadListe
     public void onStart(){
         // If BT is not on, request that it be enabled.
         // setupChat() will then be called during onActivityResult
+        if(mBluetoothAdapter==null)
+            return;//not available
         if (!mBluetoothAdapter.isEnabled()) {
             Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             activity.startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
@@ -80,6 +82,9 @@ public class BluetoothNfcComponent extends BaseComponent implements TagReadListe
 
     @Override
     public void onResume() {
+        if(mBluetoothAdapter==null)
+            return;//not available
+
         // Performing this check in onResume() covers the case in which BT was
         // not enabled during onStart(), so we were paused to enable it...
         // onResume() will be called when ACTION_REQUEST_ENABLE activity

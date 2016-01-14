@@ -19,19 +19,27 @@ import com.mateuyabar.android.pillownfc.mixed.MixedNfcComponent;
  * To be attached to the Activity. It starts the NFCComponent, and redirects the events to the current fragment.
  */
 public class NfcActivityDelegatePresenter extends BaseActivityComponent implements TagWriteListener, TagReadListener {
-	MixedNfcComponent nfcComponent;
+	NFCComponent nfcComponent;
 	FragmentActivity activity;
 	int fragmentId;
 
-	public NfcActivityDelegatePresenter(FragmentActivity activity, int fragmentId) {
+	public NfcActivityDelegatePresenter(FragmentActivity activity, int fragmentId, NFCComponent nfcComponent) {
 		super(activity);
 		this.activity = activity;
 		this.fragmentId = fragmentId;
-		this.nfcComponent = new MixedNfcComponent(activity);
+		this.nfcComponent = nfcComponent;
 		addComponent(nfcComponent);
 		nfcComponent.setOnTagReadListener(this);
 		nfcComponent.setOnTagWriteListener(this);
 	}
+	public NfcActivityDelegatePresenter(FragmentActivity activity, int fragmentId) {
+		this(activity, fragmentId, new MixedNfcComponent(activity));
+
+	}
+
+//	public NfcActivityDelegatePresenter(FragmentActivity activity, int fragmentId, NFCComponent nfcComponent) {
+//
+//	}
 
 	public NFCComponent getNfcComponent() {
 		return nfcComponent;

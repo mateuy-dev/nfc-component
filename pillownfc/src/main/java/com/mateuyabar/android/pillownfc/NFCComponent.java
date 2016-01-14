@@ -1,9 +1,9 @@
 package com.mateuyabar.android.pillownfc;
 
-/**
- * Created by mateuyabar on 20/10/15.
- */
-public interface NFCComponent {
+import com.mateuyabar.android.cleanbase.Component;
+
+
+public interface NFCComponent extends Component{
     public void writeText(String text);
     public void undoWriteText();
 
